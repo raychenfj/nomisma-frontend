@@ -4,11 +4,14 @@ import dayjs from 'dayjs'
 import { createMockExchangeRate } from '../mock'
 
 // config axios
-// can use axios.create to create instance and support multiple backends in the future
 const coinApi = config.coinApi
 
-axios.defaults.headers.common['X-CoinAPI-Key'] = coinApi.apiKey
-axios.defaults.baseURL = coinApi.baseURL
+const instance = axios.create({
+  baseURL: coinApi.baseURL,
+  headers: {
+    'X-CoinAPI-Key': coinApi.apiKey
+  }
+})
 
 export async function getExchangeRate (duration, base = 'ETH', quote = 'USD') {
   try {
@@ -16,7 +19,7 @@ export async function getExchangeRate (duration, base = 'ETH', quote = 'USD') {
     const promises = []
     const request = async (time) => {
       try {
-        const res = await axios.get(url,
+        const res = await instance.get(url,
           { params: { time } })
         return res.data
       } catch (e) {

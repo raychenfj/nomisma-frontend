@@ -6,10 +6,3 @@ export const mode = {
   VIEW: 'view',
   EDIT: 'edit'
 }
-
-/**
- * local storage key
- */
-export const storage = {
-  DATA: 'data'
-}

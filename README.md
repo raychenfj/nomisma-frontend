@@ -39,14 +39,12 @@ After building, copy the content in  `build` folder to a static server
 - [ ] Can easily exceeded the daily limits of coin api, upgrade the plan or use mock data while developing and testing
 - [ ] Auto deploy, it's difficult to make it automatic on public repo and ci machine while keep security
 - [ ] Add Unit Test and E2E Test
-- [ ] Create `axios` instance to support multiple backends data source
 - [ ] Use `axios` interceptor to handle request and response
 - [ ] All the folders can separate into more sub folders and more files for different modules when the project size grows 
 
 ## Docs
 [CoinAPI.io](https://docs.coinapi.io/)
 [The exchange rate api](https://docs.coinapi.io/#exchange-rates)
-[Challenge](https://github.com/NomismaTech/coding-challenge-tools/blob/master/coding_challenge.md)
 [Guidelines](https://github.com/NomismaTech/coding-challenge-tools/blob/master/coding_challenge.md)
 
 ## Maintainer

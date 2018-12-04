@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
 import ContractTable from './components/contractTable'
 import ContractDetail from './components/contractDetail'
-import { mode, storage } from '../../constants'
+import { mode } from '../../constants'
 import merge from 'merge'
-import uuid from 'uuid/v4'
-import { getInitialData } from '../../utils'
+import { listContracts, createContract, updateContract, deleteContract } from '../../apis/contract'
 
 export default class Contract extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      data: getInitialData(),
+      data: [],
       currentRow: null,
       mode: mode.CREATE,
       showDetail: false,
@@ -41,6 +40,13 @@ export default class Contract extends Component {
     )
   }
 
+  async componentDidMount () {
+    const data = await listContracts()
+    this.setState({
+      data
+    })
+  }
+
   onView (row) {
     const currentRow = merge.recursive(true, row)
     this.setState({
@@ -68,7 +74,7 @@ export default class Contract extends Component {
       this.setState({
         data
       })
-      this.persistData(data)
+      deleteContract(row.id)
     }
   }
 
@@ -93,19 +99,19 @@ export default class Contract extends Component {
   }
 
   create (values) {
-    let data = [{
-      id: uuid(),
+    const item = {
       user: {
         name: values.name,
         surname: values.surname
       },
       ...values
-    }]
-    data = this.state.data.concat(data)
+    }
+
+    const data = this.state.data.concat([item])
     this.setState({
       data
     })
-    this.persistData(data)
+    createContract(item)
   }
 
   update (values) {
@@ -122,11 +128,7 @@ export default class Contract extends Component {
     this.setState({
       data
     })
-    this.persistData(data)
-  }
-
-  persistData (data) {
-    localStorage.setItem(storage.DATA, JSON.stringify(data))
+    updateContract(item.id, item)
   }
 
   onBack () {
