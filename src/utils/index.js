@@ -1,6 +1,5 @@
-import Mock from 'mockjs'
-import uuid from 'uuid/v4'
 import { storage } from '../constants'
+import { createMockData } from '../mock'
 
 export function getInitialData () {
   let data = []
@@ -8,20 +7,7 @@ export function getInitialData () {
   data = JSON.parse(localStorage.getItem(storage.DATA))
   if (data && data.length) return data
 
-  data = Mock.mock({
-    'array|5-10': [
-      {
-        id: uuid,
-        user: {
-          name: '@first',
-          surname: '@last'
-        },
-        "amountInUsd|1-100": 100,
-        "currency|1-100": 100,
-        date: '@date("yyyy-MM-dd")'
-      }
-    ]
-  }).array
+  data = createMockData()
 
   localStorage.setItem(storage.DATA, JSON.stringify(data))
 
