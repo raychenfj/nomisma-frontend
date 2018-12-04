@@ -1,0 +1,20 @@
+.contractDetail {
+  text-align: left;
+}
+
+.formItem {
+  margin-top: 10px;
+}
+
+.field {
+  padding: 5px;
+  width: 200px;
+}
+
+.error {
+  color: red;
+}
+
+.label {
+  margin-right: 15px;
+}
