@@ -1,3 +1,5 @@
+// usually need at least need two environments, one for developing and testing, another for product
+
 const config = {
   development: {
     coinApi: {

@@ -19,6 +19,7 @@ export default class Contract extends Component {
     }
   }
   render () {
+    // lifting all the state and handler to the parent components
     return (
       <div>
         {this.state.showTable && <button style={{ marginBottom: '15px' }} onClick={() => this.onCreate()}> create </button>}
@@ -108,7 +109,7 @@ export default class Contract extends Component {
   }
 
   update (values) {
-    const data = [...this.state.data]
+    const data = [...this.state.data] // clone the data state
     const index = data.findIndex(item => item.id === values.id)
     const item = {
       ...values,
@@ -117,7 +118,7 @@ export default class Contract extends Component {
         surname: values.surname
       }
     }
-    data[index] = item
+    data[index] = item // replace the updated item
     this.setState({
       data
     })

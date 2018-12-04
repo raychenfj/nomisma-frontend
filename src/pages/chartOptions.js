@@ -1,3 +1,7 @@
+/** 
+ * default chart style 
+ */
+
 export default {
   datasets: [{
     fill: false,

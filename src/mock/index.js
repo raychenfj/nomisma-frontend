@@ -2,6 +2,9 @@ import uuid from 'uuid/v4'
 import Mock from 'mockjs'
 import dayjs from 'dayjs'
 
+/**
+ * create mock contract data
+ */
 export function createMockData () {
   const template = {
     'array|5-10': [
@@ -21,6 +24,9 @@ export function createMockData () {
   return Mock.mock(template).array
 }
 
+/**
+ * create mock exchange rate data
+ */
 export function createMockExchangeRate(duration, base, quote) {
   const data = []
   for (let i = duration - 1; i >= 0; i--) {
@@ -31,6 +37,5 @@ export function createMockExchangeRate(duration, base, quote) {
       asset_id_quote: quote
     })
   }
-  console.log(data)
   return data
 }

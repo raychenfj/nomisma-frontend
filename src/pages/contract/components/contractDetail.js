@@ -18,6 +18,8 @@ export default class ContractDetail extends Component {
       date: '',
     }
 
+    // when create in create mode, the initial values are empty
+    // otherwise, display the data in props
     const initialValues = this.props.mode === mode.CREATE
       ? defaultInitialValues
       : {
@@ -27,15 +29,17 @@ export default class ContractDetail extends Component {
         date: dateFormatter(this.props.data.date)
       }
     
+    // read only when view the detail
     const readOnly = this.props.mode === mode.VIEW
 
     return (
       <div className={styles.contractDetail}>
-        {/* <h1>Any place in your app!</h1> */}
         <Formik
           initialValues={initialValues}
           validate={values => {
             const errors = {};
+
+            // validate based on rules, inspired by async-validator(https://github.com/yiminghe/async-validator)
             const rules = {
               name: {
                 required: true

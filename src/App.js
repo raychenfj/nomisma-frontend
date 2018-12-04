@@ -10,8 +10,9 @@ class App extends Component {
   constructor(props) {
     super(props)
 
+    // use a flag to navigate between crud and chart
     this.state = {
-      showCRUD: false
+      showCRUD: true
     }
   }
 

@@ -16,6 +16,8 @@ Production: https://raychenfj.github.io/nomisma/
 
 2. Fill `apiKey` for both development and production env in `config.js`
 
+3. run `npm run start` and visit `http://localhost:3000/` in your browser
+
 ## How To Build
 ```bash
 # build for development environment
@@ -35,9 +37,11 @@ After building, copy the content in  `build` folder to a static server
 - [ ] Loading animation for the chart
 - [ ] Remove mock data
 - [ ] Can easily exceeded the daily limits of coin api, upgrade the plan or use mock data while developing and testing
-- [ ] Auto deploy
+- [ ] Auto deploy, it's difficult to make it automatic on public repo and ci machine while keep security
 - [ ] Add Unit Test and E2E Test
-
+- [ ] Create `axios` instance to support multiple backends data source
+- [ ] Use `axios` interceptor to handle request and response
+- [ ] All the folders can separate into more sub folders and more files for different modules when the project size grows 
 
 ## Docs
 [CoinAPI.io](https://docs.coinapi.io/)

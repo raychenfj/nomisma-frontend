@@ -1,9 +1,17 @@
-import dateFormat from 'dateformat'
+import dayjs from 'dayjs'
 
-export function dateFormatter (date, format='yyyy-mm-dd') {
-  return dateFormat(date, format)
+/**
+ * date formatter
+ * default format is yyyy-mm-dd
+ */
+export function dateFormatter (date, format='YYYY-MM-DD') {
+  return dayjs(date).format(format)
 }
 
-export function rateFormatter (value) {
-  return +value.toFixed(2)
+/**
+ * rate formatter
+ * keep two decimals by default
+ */
+export function rateFormatter (value, digits = 2) {
+  return +value.toFixed(digits)
 }
