@@ -3,11 +3,34 @@
 
 # Nomisma Frontend Code Challenge
 
-> repo for nomisma frontemd code challenge
+> repo for nomisma frontend code challenge
 
-## Overall
+## Overview
+
+This is a project for nomisma frontend code challenge. Read the challenge guideline at docs section.
+
+It contains two part mainly, one is contract with CRUD operation, another one is chart of exchange rate.
+
+Build with `React`.
 
 ### Project Structure
+
+.
+|── server                     a simple json server backend attached to this project
+|── src                        source code of frontend 
+     |—— apis                  backend or 3rd-party apis
+     |—— components            highly reusable components, not related to business
+     |—— constants             constant variables can be reused
+     |—— formatters            formatter
+     |—— mock                  create mock data
+     |—— pages                 pages
+     |     |—— contract        pages for contract module
+     |     |    |—— components components related to this module and business
+     |     |
+     |     |—— chart           pages for chart module
+     |
+     |—— styles                global styles
+
 
 ### Highlights
 

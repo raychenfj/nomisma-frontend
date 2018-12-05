@@ -17,6 +17,7 @@ export async function listContracts() {
     return res.data
   } catch (e) {
     console.error(e)
+    return []
   }
 }
 
@@ -29,6 +30,7 @@ export async function getContract(id) {
     return res.data
   } catch (e) {
     console.error(e)
+    return {}
   }
 }
 
