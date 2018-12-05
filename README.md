@@ -15,21 +15,21 @@ Build with `React`.
 
 ### Project Structure
 
-.
-|── server                     a simple json server backend attached to this project
-|── src                        source code of frontend 
-     |—— apis                  backend or 3rd-party apis
-     |—— components            highly reusable components, not related to business
-     |—— constants             constant variables can be reused
-     |—— formatters            formatter
-     |—— mock                  create mock data
-     |—— pages                 pages
-     |     |—— contract        pages for contract module
-     |     |    |—— components components related to this module and business
-     |     |
-     |     |—— chart           pages for chart module
-     |
-     |—— styles                global styles
+      .
+      |── server                     a simple json server backend attached to this project
+      |── src                        source code of frontend 
+          |—— apis                  backend or 3rd-party apis
+          |—— components            highly reusable components, not related to business
+          |—— constants             constant variables can be reused
+          |—— formatters            formatter
+          |—— mock                  create mock data
+          |—— pages                 pages
+          |     |—— contract        pages for contract module
+          |     |    |—— components components related to this module and business
+          |     |
+          |     |—— chart           pages for chart module
+          |
+          |—— styles                global styles
 
 
 ### Highlights
