@@ -14,6 +14,10 @@ const instance = axios.create({
 })
 
 export async function getExchangeRate (duration, base = 'ETH', quote = 'USD') {
+  // use mock data in development
+  if (process.env.REACT_APP_ENV !== 'production') {
+    return createMockExchangeRate(duration, base, quote)
+  }
   try {
     const url = `v1/exchangerate/${base}/${quote}`
     const promises = []
