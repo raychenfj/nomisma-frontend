@@ -79,8 +79,11 @@ After building, copy the content in  `build` folder to a static server
 
 ## Docs
 [CoinAPI.io](https://docs.coinapi.io/)
+
 [The exchange rate api](https://docs.coinapi.io/#exchange-rates)
+
 [Guidelines](https://github.com/NomismaTech/coding-challenge-tools/blob/master/coding_challenge.md)
 
 ## Maintainer
-(raychenfj)[https://github.com/raychenfj]
+
+[raychenfj](https://github.com/raychenfj)
