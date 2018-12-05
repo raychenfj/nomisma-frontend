@@ -16,8 +16,8 @@ Build with `React`.
 ### Project Structure
 
       .
-      |── server                     a simple json server backend attached to this project
-      |── src                        source code of frontend 
+      |── server                    a simple json server backend attached to this project
+      |── src                       source code of frontend 
           |—— apis                  backend or 3rd-party apis
           |—— components            highly reusable components, not related to business
           |—— constants             constant variables can be reused

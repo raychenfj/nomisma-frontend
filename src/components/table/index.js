@@ -37,7 +37,7 @@ export default class Table extends Component {
               data.map((row, index) =>
                 <tr key={row.id || index}>
                   {columns.map((column, i) => {
-                    if (column.prop) {
+                    if (!column.render && column.prop) {
                       return <td key={i}>
                         {column.formatter ? column.formatter(get(row, column.prop)) : get(row, column.prop)}
                       </td>
