@@ -34,7 +34,11 @@ Build with `React`.
 
 ### Highlights
 
-### Trade-Off
+Some highlight I think worth mention:
+
+* [A table components can be highly configured](./src/components/table/index.js)
+* [Validate form base on rules](./src/pages/contract/components/contractDetail.js)
+* [Separate chart data from its style](./src/pages/chart/index.js)
 
 ## Link
 Development: http://raychenfj.me/nomisma/
