@@ -7,8 +7,8 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY ./src/mock/db.js .
+COPY . .
 
 EXPOSE 3004
 
-CMD ["npm", "run", "server"]
+CMD ["npm", "run", "start"]

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getExchangeRate } from '../apis'
+import { getExchangeRate } from '../apis/coin'
 import { Line } from 'react-chartjs-2';
 import options from './chartOptions'
 import { dateFormatter, rateFormatter } from '../formatters'

@@ -5,10 +5,18 @@
 
 > repo for nomisma frontemd code challenge
 
-## Link
-Development: https://raychenfj.github.io/nomisma/
+## Overall
 
-Production: https://raychenfj.github.io/nomisma/
+### Project Structure
+
+### Highlights
+
+### Trade-Off
+
+## Link
+Development: http://raychenfj.me/nomisma/
+
+Production: http://raychenfj.me/nomisma/
 
 ## How To Run It
 
@@ -37,7 +45,7 @@ After building, copy the content in  `build` folder to a static server
 - [ ] Loading animation for the chart
 - [ ] Remove mock data
 - [ ] Can easily exceeded the daily limits of coin api, upgrade the plan or use mock data while developing and testing
-- [ ] Auto deploy, it's difficult to make it automatic on public repo and ci machine while keep security
+- [ ] Auto deploy when push, it's difficult to make it completely automatic when it's public while keep security
 - [ ] Add Unit Test and E2E Test
 - [ ] Use `axios` interceptor to handle request and response
 - [ ] All the folders can separate into more sub folders and more files for different modules when the project size grows 
