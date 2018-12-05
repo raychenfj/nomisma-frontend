@@ -9,7 +9,7 @@
 
 This is a project for nomisma frontend code challenge. Read the challenge guideline at docs section.
 
-It contains two part mainly, one is contract with CRUD operation, another one is chart of exchange rate.
+It contains two parts mainly, one is contract with CRUD operation, another one is chart of exchange rate.
 
 Build with `React`.
 
